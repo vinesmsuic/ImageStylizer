@@ -1,7 +1,8 @@
-# Stylize-Image
-Image Styliser using Fast Image Style Transfer.
+# ImageStylizer
 
-# Idea
+A Image Styliser to turn any images into a artwork.
+
+## Idea
 
 To create a program to generate this kind of image:
 
