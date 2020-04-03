@@ -1,6 +1,6 @@
 # ImageStylizer
 
-A Image Styliser to turn any images into a artwork.
+A Image Styliser to turn any image into an artwork.
 
 ## Idea
 
