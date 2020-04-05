@@ -5,8 +5,9 @@ A Image Styliser to turn any image into an artwork.
 ## Idea
 
 To create a program to generate this kind of image:
-
-![](https://d2i0awu7puyonj.cloudfront.net/3/101122/f7ee2dc3-ce0a-4522-baff-383136ef06d6.jpg)
+<p align = 'center'>
+<img src = 'https://d2i0awu7puyonj.cloudfront.net/3/101122/f7ee2dc3-ce0a-4522-baff-383136ef06d6.jpg' width = '50%'>
+</p>
 
 ## Progress
 
@@ -15,8 +16,10 @@ To create a program to generate this kind of image:
 <p align = 'center'>
 <img src = 'https://vinesmsuic.github.io/pixiv/pics/cat.jpg' height = '246px'>
 <img src = 'https://vinesmsuic.github.io/pixiv/pics/city.jpg' height = '246px'>
-<img src = 'https://i.imgur.com/dMQYjvO.png' width = '627px'></a>
+<br>
+<img src = 'https://i.imgur.com/dMQYjvO.png' width = '300px'>
 </p>
+
 
 
 ## TODO
