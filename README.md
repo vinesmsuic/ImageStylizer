@@ -5,6 +5,7 @@ A Image Styliser to turn any image into an artwork.
 ## Idea
 
 To create a program to generate this kind of image:
+
 <p align = 'center'>
 <img src = 'https://d2i0awu7puyonj.cloudfront.net/3/101122/f7ee2dc3-ce0a-4522-baff-383136ef06d6.jpg' width = '50%'>
 </p>
@@ -23,5 +24,6 @@ To create a program to generate this kind of image:
 
 
 ## TODO
+
 * Cut Image in half to achieve the effect I want.
 * GUI (Maybe?)

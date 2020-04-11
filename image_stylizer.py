@@ -9,18 +9,20 @@ import string
 content_url_input = input("Image Url of Content?")
 style_url_input = input("Image Url of Sytle?")
 
-# Downloads a file from a URL if it not already in the cache.
-content_path = tf.keras.utils.get_file(randomFileName(10), content_url_input)
-style_path = tf.keras.utils.get_file(randomFileName(11), style_url_input)
-
-file_name_input = input("Output file name?")
-file_name = file_name_input + ".png"
-
 def randomFileName(stringLength=10):
   letters = string.ascii_lowercase
   return (''.join(random.choice(letters) for i in range(stringLength))) + ".jpg"
 
-def load_img(path_to_img, max_dim = 1024):
+
+# Downloads a file from a URL if it not already in the cache.
+content_path = tf.keras.utils.get_file(randomFileName(), content_url_input)
+style_path = tf.keras.utils.get_file(randomFileName(), style_url_input)
+
+file_name_input = input("Output file name?")
+file_name = file_name_input + ".png"
+
+
+def load_img(path_to_img, max_dim = 512):
   img = tf.io.read_file(path_to_img)
   img = tf.image.decode_image(img, channels=3)
   img = tf.image.convert_image_dtype(img, tf.float32)
