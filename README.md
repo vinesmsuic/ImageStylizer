@@ -33,6 +33,16 @@ Output Image:
 <img src = 'https://i.imgur.com/ybluTkn.png' width = '50%'>
 </p>
 
+
+## Findings
+
+* Select Content as Sytle image actually produce a better result.
+
+<p align = 'center'>
+<img src = 'https://i.imgur.com/PQuuiQl.png' width = '50%'>
+</p>
+
+
 ## TODO
 
 * GUI (Maybe?)
