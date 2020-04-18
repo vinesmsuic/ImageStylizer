@@ -21,9 +21,12 @@ To create a program to generate this kind of image:
 <img src = 'https://i.imgur.com/dMQYjvO.png' width = '300px'>
 </p>
 
+### 18-April 2020 - Cut Image in half to achieve the effect I want.
 
+<p align = 'center'>
+<img src = 'https://i.imgur.com/VCCDwOl.png' width = '300px'>
+</p>
 
 ## TODO
 
-* Cut Image in half to achieve the effect I want.
 * GUI (Maybe?)
