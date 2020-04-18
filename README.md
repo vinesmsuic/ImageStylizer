@@ -25,6 +25,8 @@ To create a program to generate this kind of image:
 
 <p align = 'center'>
 <img src = 'https://i.imgur.com/VCCDwOl.png' width = '300px'>
+<br>
+<img src = 'https://i.imgur.com/ybluTkn.png' width = '50%'>
 </p>
 
 ## TODO
