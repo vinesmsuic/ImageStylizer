@@ -15,8 +15,12 @@ To create a program to generate this kind of image:
 ### 5-April 2020 - CLI image input and generate a output photo.
 
 <p align = 'center'>
+Original Image, Style Image:
+<br>
 <img src = 'https://vinesmsuic.github.io/pixiv/pics/cat.jpg' height = '246px'>
 <img src = 'https://vinesmsuic.github.io/pixiv/pics/city.jpg' height = '246px'>
+<br>
+Output Image:
 <br>
 <img src = 'https://i.imgur.com/dMQYjvO.png' width = '300px'>
 </p>
