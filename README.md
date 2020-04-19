@@ -7,7 +7,7 @@ A Image Styliser to turn any image into an artwork.
 To create a program to generate this kind of image:
 
 <p align = 'center'>
-<img src = 'https://d2i0awu7puyonj.cloudfront.net/3/101122/f7ee2dc3-ce0a-4522-baff-383136ef06d6.jpg' width = '50%'>
+<img src = 'https://d2i0awu7puyonj.cloudfront.net/3/101122/f7ee2dc3-ce0a-4522-baff-383136ef06d6.jpg' width = '75%'>
 </p>
 
 ## Progress
@@ -28,20 +28,10 @@ Output Image:
 ### 18-April 2020 - Cut Image in half to achieve the effect I want.
 
 <p align = 'center'>
-<img src = 'https://i.imgur.com/VCCDwOl.png' width = '300px'>
-<br>
-<img src = 'https://i.imgur.com/ybluTkn.png' width = '50%'>
+<img src = 'https://i.imgur.com/p4p5roW.jpg' width = '300px'>
+<img src = 'https://i.imgur.com/uVYWhFG.jpg' width = '300px'>
+<img src = 'https://i.imgur.com/PbRubo6.jpg' width = '300px'>
 </p>
-
-
-## Findings
-
-* Select Content as Sytle image actually produce a better result.
-
-<p align = 'center'>
-<img src = 'https://i.imgur.com/PQuuiQl.png' width = '50%'>
-</p>
-
 
 ## TODO
 

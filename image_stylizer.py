@@ -4,22 +4,9 @@ import numpy as np
 from PIL import Image
 import random
 import string
-import requests
-from io import BytesIO
 
 content_url_input = input("Image Url of Content?")
 style_url_input = input("Image Url of Sytle?")
-
-response = requests.get(content_url_input)
-content_img_backup = Image.open(BytesIO(response.content))
-#content_img_backup.save("testog.png")
-
-
-c_width, c_height = content_img_backup.size
-print(c_width, c_height)
-# Crop content image
-croppedIm1 = content_img_backup.crop((0, 0, int(c_width/2), c_height))
-#croppedIm1.save("tst.png")
 
 def randomFileName(stringLength=10):
   letters = string.ascii_lowercase
@@ -33,8 +20,8 @@ style_path = tf.keras.utils.get_file(randomFileName(), style_url_input)
 file_name_input = input("Output file name?")
 file_name = file_name_input + ".png"
 
-'''
-def load_img(path_to_img, max_dim = 512):
+
+def load_img(path_to_img, max_dim = 1024):
   img = tf.io.read_file(path_to_img)
   img = tf.image.decode_image(img, channels=3)
   img = tf.image.convert_image_dtype(img, tf.float32)
@@ -48,19 +35,6 @@ def load_img(path_to_img, max_dim = 512):
   img = tf.image.resize(img, new_shape)
   img = img[tf.newaxis, :]
   return img
-'''
-
-def load_img(path_to_img):
-  img = tf.io.read_file(path_to_img)
-  img = tf.image.decode_image(img, channels=3)
-  img = tf.image.convert_image_dtype(img, tf.float32)
-
-  shape = tf.cast(tf.shape(img)[:-1], tf.int32)
-
-  img = tf.image.resize(img, shape)
-  img = img[tf.newaxis, :]
-  return img
-
 
 content_image = load_img(content_path)
 style_image = load_img(style_path)
@@ -72,6 +46,13 @@ def tensor_to_image(tensor):
     assert tensor.shape[0] == 1
     tensor = tensor[0]
   return Image.fromarray(tensor)
+
+content_img_backup = tensor_to_image(content_image)
+c_width, c_height = content_img_backup.size
+print(c_width, c_height)
+# Crop content image
+croppedIm1 = content_img_backup.crop((0, 0, int(c_width/2), c_height))
+
 
 # Fast arbitrary image style transfer
 hub_module = hub.load('https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2')
