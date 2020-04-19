@@ -1,7 +1,6 @@
 import tensorflow as tf
 import tensorflow_hub as hub
 import numpy as np
-import PIL.Image
 from PIL import Image
 import random
 import string
@@ -12,11 +11,14 @@ content_url_input = input("Image Url of Content?")
 style_url_input = input("Image Url of Sytle?")
 
 response = requests.get(content_url_input)
-content_img = Image.open(BytesIO(response.content))
-c_width, c_height = content_img.size
+content_img_backup = Image.open(BytesIO(response.content))
+#content_img_backup.save("testog.png")
+
+
+c_width, c_height = content_img_backup.size
 print(c_width, c_height)
 # Crop content image
-croppedIm1 = content_img.crop((0, 0, int(c_width/2), c_height))
+croppedIm1 = content_img_backup.crop((0, 0, int(c_width/2), c_height))
 #croppedIm1.save("tst.png")
 
 def randomFileName(stringLength=10):
@@ -24,7 +26,7 @@ def randomFileName(stringLength=10):
   return (''.join(random.choice(letters) for i in range(stringLength))) + ".jpg"
 
 
-# Downloads a file from a URL if it not already in the cache.
+# Downloads a file from a URL.
 content_path = tf.keras.utils.get_file(randomFileName(), content_url_input)
 style_path = tf.keras.utils.get_file(randomFileName(), style_url_input)
 
@@ -69,12 +71,15 @@ def tensor_to_image(tensor):
   if np.ndim(tensor)>3:
     assert tensor.shape[0] == 1
     tensor = tensor[0]
-  return PIL.Image.fromarray(tensor)
+  return Image.fromarray(tensor)
 
 # Fast arbitrary image style transfer
 hub_module = hub.load('https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2')
 stylized_image = hub_module(tf.constant(content_image), tf.constant(style_image))[0]
 output_image = tensor_to_image(stylized_image)
+
+output_image.save("styled.png")
+
 r_width, r_height = output_image.size
 print(r_width, r_height)
 croppedIm2 = output_image.crop((int(r_width/2)+1, 0, r_width, r_height))
