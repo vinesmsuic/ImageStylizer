@@ -10,6 +10,8 @@ To create a program to generate this kind of image:
 <img src = 'https://d2i0awu7puyonj.cloudfront.net/3/101122/f7ee2dc3-ce0a-4522-baff-383136ef06d6.jpg' width = '75%'>
 </p>
 
+No fancy stuff. Just use the TFhub to get what I want. #wannabeArtist
+
 ## Progress
 
 ### 5-April 2020 - CLI image input and generate a output photo.
@@ -33,6 +35,13 @@ Output Image:
 <img src = 'https://i.imgur.com/PbRubo6.jpg' width = '300px'>
 </p>
 
-## TODO
+### 13-Augest 2020 - Finally Figured out the concept and try to improve the program
 
-* GUI (Maybe?)
+* The Module works the best when Style image size is 256x256
+* The old one supporting large size code is archived
+
+<p align = 'center'>
+<img src = 'https://i.imgur.com/yQnAJYi.jpg' width = '300px'>
+<img src = 'https://i.imgur.com/yNGrvzo.jpg' width = '300px'>
+<img src = 'https://i.imgur.com/2JDhfOG.png' width = '300px'>
+</p>
